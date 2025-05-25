@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../GreenPanier/assets/images/logo/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="../assets/greenpanier.css"/>
+    <link rel="icon" href="../assets/images/logo/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../assets.css"/>
     <title>GreenPanier | Payment</title>
     <style>
 
@@ -216,7 +216,7 @@
         </div>
     </section>
 
-    <script src="../assets/greenpanier.js"></script>
+    <script src="../assets.js"></script>
     <script>
         document.getElementById("cardNumber").addEventListener("input", function (e) {
             let value = e.target.value.replace(/\D/g, "");
@@ -266,7 +266,7 @@
 
             if (name === name.toUpperCase()) {
                 mssgShow('Payment successful! Redirecting to main page...', 'success');
-                setTimeout(() => {window.location.href = '../index.html'; }, 222);
+                setTimeout(() => {window.location.href = '...html'; }, 222);
             } else {
                 mssgShow('Payment failed. Please enter valid infos.', 'error');
                 setTimeout(() => {document.getElementById('paymentForm').reset(), resetTotal(); document.getElementById('message').style.display = 'none'; }, 111);

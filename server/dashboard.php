@@ -45,8 +45,8 @@ while ($row = $result->fetch_assoc()) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="../GreenPanier/assets/images/logo/favicon.ico" type="image/x-icon"/>
-  <link rel="stylesheet" href="../assets/greenpanier.css">
+  <link rel="icon" href="../assets/images/logo/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="../assets.css">
   <title>GreenPanier | Admin Dashboard</title>
   <style>
 
@@ -231,6 +231,6 @@ while ($row = $result->fetch_assoc()) {
     </section>
   </div>
 
-  <script src="../assets/greenpanier.js"></script>
+  <script src="../assets.js"></script>
 </body>
 </html>

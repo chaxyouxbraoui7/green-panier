@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($statement->execute()) {
         echo "<h1 style='color:green; text-align:center;'>Registration successful. Redirecting to the home page...</h1>";
-        header("refresh:1; url=../index.html");
+        header("refresh:1; url=...html");
     } else {
         echo "<h1 style='color:red; text-align:center;'>Registration failed! Try a different email.</h1>";
     }
