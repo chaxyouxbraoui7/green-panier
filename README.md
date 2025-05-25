@@ -1,3 +1,11 @@
+<!--<h1 align="center">GreenPanier - Mini E-Commerce Website Project</h1>
+
+<p align="center">
+  <img src="gui/images&logo/logo.png" alt="Student Attendance System Logo" width="225"/>
+</p>
+
+----->
+
 # GreenPanier - Mini E-Commerce Website Project
 
 ## Description
@@ -7,6 +15,7 @@
 It is a basic e-commerce website where users can browse *vegetables* and *fruits*, register, log in, and proceed to checkout.
 
 The project runs *locally* using *PHP* and *MySQL* in *XAMPP*.
+
 ## Features
 
 - User registration & login
@@ -33,8 +42,6 @@ The project runs *locally* using *PHP* and *MySQL* in *XAMPP*.
 git clone https://github.com/chaxyouxbraoui7/green-panier.git
 ```
 
-## Notes
-
-This project is for local hosting only.
-
-It is a 30% mini-project and does not include advanced features.
+> [!NOTE]
+> 
+> You can view the website at  thanks to the GitHub pages feature (static only ~ HTML, CSS & JS, no backend)

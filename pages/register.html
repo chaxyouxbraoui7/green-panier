@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../GreenPanier/assets/images/logo/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../assets/greenpanier.css"/>
+    <title>GreenPanier | Register</title>
+<style>
+
+    :root {
+        --background: whitesmoke;
+        --color: black;
+        --primary-color: lightgreen;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: "poppins";
+        background: var(--background);
+        color: var(--color);
+        letter-spacing: 2.5px;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--color);
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: relative;
+    }
+    
+    .login-container {
+        position: relative;
+        width: 25%;
+    }
+    .form-container {
+        border: 1px solid rgba(0, 0, 0, 0.025);
+        box-shadow: 0 0 33px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        backdrop-filter: blur(25px);
+        padding: 25px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .login-container form input {
+        display: block;
+        padding: 15px;
+        width: 100%;
+        margin: 15px 0;
+        outline: none;
+        background-color: rgba(0, 0, 0, 0.025);
+        border: none;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        font-weight: bolder;
+        letter-spacing: 0.75px;
+        font-size: 15px;
+        backdrop-filter: blur(15px);
+    }
+    
+    .login-container form button {
+        background-color: var(--primary-color);
+        display: block;
+        padding: 15px;
+        border-radius: 5px;
+        outline: none;
+        font-size: 15px;
+        letter-spacing: 1.5px;
+        font-weight: bolder;
+        width: 25%;
+        cursor: pointer;
+        margin: auto;
+        margin-bottom: 25px;
+        transition: all 0.125s ease-in-out;
+        border: none;
+    }
+    
+    .login-container form button:hover {
+        box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.125);
+        transform: scale(1.025);
+        -webkit-transform: scale(1.025);
+        -moz-transform: scale(1.025);
+        -ms-transform: scale(1.025);
+        -o-transform: scale(1.025);
+    }
+    
+    .circle {
+        width: 7rem;
+        height: 7rem;
+        background: var(--primary-color);
+        border-radius: 75%;
+        -webkit-border-radius: 75%;
+        -moz-border-radius: 75%;
+        -ms-border-radius: 75%;
+        -o-border-radius: 75%;
+        position: absolute;
+    }
+    
+    .circle-in {
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        transform: translate(45%, 45%);
+        -webkit-transform: translate(45%, 45%);
+        -moz-transform: translate(45%, 45%);
+        -ms-transform: translate(45%, 45%);
+        -o-transform: translate(45%, 45%);
+    }
+
+    .opacity {
+        opacity: 0.5;
+    }
+
+</style>
+</head>
+<body>
+    <section class="container">
+        <div class="login-container">
+            <div class="form-container">
+                <div class="bubble-effect"></div>
+                <h1 class="opacity">REGISTER</h1>
+                <form action="..\server\register.php" method="POST">
+                    <input type="email" name="email" placeholder="E-mail" required/>
+                    <input type="password" name="psswrd" placeholder="Password" required/>
+                    <button class="opacity">SUBMIT</button>
+                </form>
+            </div>
+            <div class="circle circle-in"></div>
+        </div>
+    </section>  
+  <script src="../assets/greenpanier.js"></script>
+</body>
+</html>

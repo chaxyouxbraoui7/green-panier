@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../GreenPanier/assets/images/logo/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../assets/greenpanier.css"/>
+    <title>GreenPanier | Payment</title>
+    <style>
+
+    :root {
+        --background: whitesmoke;
+        --color: black;
+        --primary-color: lightgreen;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: "poppins";
+        background: var(--background);
+        color: var(--color);
+        letter-spacing: 2.5px;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--color);
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: relative;
+    }
+    
+    .payment-container {
+        position: relative;
+        width: 25%;
+    }
+
+    .payment-total {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        color: var(--primary-color);
+        font-weight: bold;
+        font-size: 1.5rem;
+        z-index: 10;
+    }
+    .form-container {
+        border: 1px solid rgba(0, 0, 0, 0.025);
+        box-shadow: 0 0 33px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        backdrop-filter: blur(25px);
+        padding: 25px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .form-container form input {
+        display: block;
+        padding: 15px;
+        width: 100%;
+        margin: 15px 0;
+        outline: none;
+        background-color: rgba(0, 0, 0, 0.025);
+        border: none;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        font-weight: bolder;
+        letter-spacing: 0.75px;
+        font-size: 15px;
+        backdrop-filter: blur(15px);
+    }
+    
+    .form-container form button {
+        background-color: var(--primary-color);
+        display: block;
+        padding: 15px;
+        border-radius: 5px;
+        outline: none;
+        font-size: 15px;
+        letter-spacing: 1.5px;
+        font-weight: bolder;
+        width: 75%;
+        cursor: pointer;
+        margin: auto;
+        margin-bottom: 25px;
+        transition: all 0.125s ease-in-out;
+        border: none;
+    }
+    
+    .form-container form button:hover {
+        box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.125);
+        transform: scale(1.025);
+        -webkit-transform: scale(1.025);
+        -moz-transform: scale(1.025);
+        -ms-transform: scale(1.025);
+        -o-transform: scale(1.025);
+    }
+    
+    .circle {
+        width: 7rem;
+        height: 7rem;
+        background: var(--primary-color);
+        border-radius: 75%;
+        -webkit-border-radius: 75%;
+        -moz-border-radius: 75%;
+        -ms-border-radius: 75%;
+        -o-border-radius: 75%;
+        position: absolute;
+    }
+    
+    .circle-one-in {
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        transform: translate(45%, 45%);
+        -webkit-transform: translate(45%, 45%);
+        -moz-transform: translate(45%, 45%);
+        -ms-transform: translate(45%, 45%);
+        -o-transform: translate(45%, 45%);
+    }
+
+    .circle-two-in {
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transform: translate(-45%, -45%);
+        -webkit-transform: translate(-45%, -45%);
+        -moz-transform: translate(-45%, -45%);
+        -ms-transform: translate(-45%, -45%);
+        -o-transform: translate(-45%, -45%);
+    }
+
+    .opacity {
+        opacity: 0.5;
+    }
+
+    .row {
+        display: flex;
+        gap: 15px;
+    }
+
+    .row .form-group {
+        flex: 1;
+    }
+
+    .message {
+        text-align: center;
+        padding: 15px;
+        border-radius: 5px;
+        backdrop-filter: blur(15px);
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        display: none;
+        margin-top: 1rem;
+    }
+
+    .success {
+        font-size: 15px;
+        background-color: rgba(223, 240, 216, 0.75);
+        color: green;
+        border: 1px solid rgba(214, 233, 198, 0.75);
+    }
+
+    .error {
+        font-size: 15px;
+        background-color: rgba(242, 222, 222, 0.75);
+        color: red;
+        border: 1px solid rgba(235, 204, 209, 0.75);
+    }
+    
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="payment-container">
+            <div class="circle circle-one-in"></div>
+            <div class="form-container">
+                <div id="paymentTotal" class="payment-total"></div>
+                <div class="bubble-effect"></div>
+                <h1 class="opacity">PAYMENT</h1>
+                <form id="paymentForm">
+                    <input type="text" id="name" placeholder="NAME" required>
+                    <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000" required>
+                    <div class="row">
+                        <input type="text" id="expiry" placeholder="MM/YY" required>
+                        <input type="text" id="cvc" placeholder="CVC" required>
+                    </div>
+                    <button type="submit" class="opacity">SUBMIT</button>
+                    <button type="button" id="resetBtn" class="opacity" style="margin-top: 10px;">RESET</button>
+                </form>
+                <div id="message" class="message"></div>
+            </div>
+            <div class="circle circle-two-in"></div>
+        </div>
+    </section>
+
+    <script src="../assets/greenpanier.js"></script>
+    <script>
+        document.getElementById("cardNumber").addEventListener("input", function (e) {
+            let value = e.target.value.replace(/\D/g, "");
+            value = value.substring(0, 16);
+            let formatted = value.replace(/(.{4})/g, "$1 ").trim();
+            e.target.value = formatted;
+        });
+
+        document.getElementById("expiry").addEventListener("input", function (e) {
+            let value = e.target.value.replace(/\D/g, "");
+            if (value.length > 4) value = value.substring(0, 4);
+            if (value.length > 2) {
+                value = value.substring(0, 2) + "/" + value.substring(2);
+            }
+            e.target.value = value;
+        });
+
+        document.getElementById("cvc").addEventListener("input", function (e) {
+            let value = e.target.value.replace(/\D/g, "");
+            e.target.value = value.substring(0, 3);
+        });
+
+        function mssgShow(text, type) {
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = text;
+            messageElement.className = 'message ' + type;
+            messageElement.style.display = 'block';
+        }
+        
+        function total() {
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let total = 0;
+        
+            cart.forEach(item => {total += item.price * item.quantity;});
+        
+            const totalDisplay = document.getElementById("paymentTotal");
+            totalDisplay.textContent = `Total: ${total.toFixed(2)} DH`;
+        }
+
+        function resetTotal() {localStorage.removeItem("cart"); total();}
+
+        document.getElementById('resetBtn').addEventListener('click', resetTotal);
+
+        document.getElementById('paymentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById("name").value.trim();
+
+            if (name === name.toUpperCase()) {
+                mssgShow('Payment successful! Redirecting to main page...', 'success');
+                setTimeout(() => {window.location.href = '../index.html'; }, 222);
+            } else {
+                mssgShow('Payment failed. Please enter valid infos.', 'error');
+                setTimeout(() => {document.getElementById('paymentForm').reset(), resetTotal(); document.getElementById('message').style.display = 'none'; }, 111);
+            }
+        });
+                
+        total();
+    </script>
+</body>
+</html>
