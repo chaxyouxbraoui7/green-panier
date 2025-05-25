@@ -42,3 +42,7 @@ git clone https://github.com/chaxyouxbraoui7/green-panier.git
 > [!NOTE]
 > 
 > You can view the website at [GreenPanier](https://chaxyouxbraoui7.github.io/green-panier/) thanks to the GitHub pages feature (static only ~ HTML, CSS & JS, no backend)
+>
+> You can see the backend at <a href="a-documentation\README.md" target="_blank">Here</a>
+>
+> This Mini Project was inspired by this web site [Marché Express](https://marcheexpress.ma/)
