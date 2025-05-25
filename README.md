@@ -1,7 +1,9 @@
-<div align="center">
-  <img src="assets/images/logo/logo.png" alt="GreenPanier Logo" width="75" style="border-radius: 75%; vertical-align: middle; margin-right: 15px;">
-  <strong style="font-size: 2.5em;">GreenPanier - Mini E-Commerce Website Project</strong>
-</div>
+<table align="center">
+  <tr>
+    <td><img src="assets/images/logo/logo.png" alt="GreenPanier Logo" width="75" style="border-radius: 75%;"></td>
+    <td><h1>GreenPanier - Mini E-Commerce Website Project</h1></td>
+  </tr>
+</table>
 
 ## Description
 
