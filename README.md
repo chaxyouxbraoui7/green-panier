@@ -1,12 +1,7 @@
-<!--<h1 align="center">GreenPanier - Mini E-Commerce Website Project</h1>
-
-<p align="center">
-  <img src="gui/images&logo/logo.png" alt="Student Attendance System Logo" width="225"/>
-</p>
-
------>
-
-# GreenPanier - Mini E-Commerce Website Project
+<div align="center">
+  <img src="assets/images/logo/logo.png" alt="GreenPanier Logo" width="75" style="border-radius: 75%; vertical-align: middle; margin-right: 15px;">
+  <strong style="font-size: 2.5em;">GreenPanier - Mini E-Commerce Website Project</strong>
+</div>
 
 ## Description
 
@@ -44,4 +39,4 @@ git clone https://github.com/chaxyouxbraoui7/green-panier.git
 
 > [!NOTE]
 > 
-> You can view the website at  thanks to the GitHub pages feature (static only ~ HTML, CSS & JS, no backend)
+> You can view the website at [GreenPanier](https://chaxyouxbraoui7.github.io/green-panier/) thanks to the GitHub pages feature (static only ~ HTML, CSS & JS, no backend)
