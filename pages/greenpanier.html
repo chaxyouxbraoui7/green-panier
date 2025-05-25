@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" href="../assets/images/logo/favicon.ico" type="image/x-icon"/>
-  <link rel="stylesheet" href="../assets.css"/>
+  <link rel="stylesheet" href="../assets/greenpanier.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <title>GreenPanier</title>
   <style>
@@ -53,7 +53,7 @@
     .header-icons {
       position: absolute;
       top: 25px;
-      left: 25px;
+      right: 25px;
       display: flex;
       gap: 25px;
       align-items: center;
@@ -232,13 +232,14 @@
   </style>
 </head>
 <body class="container">
-    <header id="the_header">
-      <div class="header-icons">
-        <a href="../pages/login.html"><i class="fas fa-user"></i></a>
-        <a href="../pages/cart_payment.html"><i class="fas fa-shopping-cart"></i></a>
-      </div>
-      <h1>GreenPanier</h1>
-    </header>
+  <header id="the_header">
+    <div id="time-toast-container"></div>
+    <div class="header-icons">
+      <a href="../pages/cart_payment.html"><i class="fas fa-shopping-cart"></i></a>
+      <a href="../pages/login.html"><i class="fas fa-user"></i></a>
+    </div>
+    <h1>GreenPanier</h1>
+  </header>
     <main>
       <div class="products-container" id="products">
         <!--mama JS will dynamically fetch the products...-->
@@ -260,7 +261,7 @@
       </div>
     </footer>
     <div id="toast-container"></div>
-    <script src="../assets.js"></script>
+    <script src="../assets/greenpanier.js"></script>
     <script>
         function fetchProducts() {fetch('../server/fetch_products.php').then(response => {
               if (!response.ok) throw new Error("Erreur serveur");

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="assets/images/logo/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="assets/greenpanier.css"/>
+  <title>Welcome</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, lightgreen, rgb(0, 65, 0), rgba(144, 238, 144, 0.247));
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    a.btn {
+      display: inline-block;
+      padding: 1.25rem 2.5rem;
+      background-color: lightgreen;
+      color: black;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.25rem;
+      transition: background-color 0.25s ease, transform 0.25s ease;
+    }
+
+    a.btn:hover {
+      background-color: #16a085;
+      transform: scale(1.025);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="bubble-effect"></div>
+    <h1>Welcome To GreenPanier</h1>
+    <a href="pages/greenpanier.html" class="btn">Go To Greenpanier</a>
+  </div>
+<script src="assets/greenpanier.js"></script>
+</body>
+</html>
