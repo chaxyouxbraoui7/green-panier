@@ -1,6 +1,6 @@
 <table align="center">
   <tr>
-    <td><img src="assets/images/logo/logo.png" alt="GreenPanier Logo" width="75" style="border-radius: 75%;"></td>
+    <td><img src="assets/images/logo/logo.png" alt="GreenPanier Logo" width="75"></td>
     <td><h1>GreenPanier - Mini E-Commerce Website Project</h1></td>
   </tr>
 </table>
