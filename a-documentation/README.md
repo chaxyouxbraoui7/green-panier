@@ -54,7 +54,7 @@
 
 ![Total Price & Payment II](screenshots/14.png)
 
-### **After the submit a messg will be showed, telling the user if the payment has been succsefully done to lead him to the home page again after some sec**
+### **After the submit a message will be toasted, telling the user if the payment has been succsefully done to lead him to the home page again after some sec**
 
 ![Payment Info](screenshots/15.png)
 
