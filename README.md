@@ -19,9 +19,11 @@ The project runs *locally* using *PHP* and *MySQL* in *XAMPP*.
 
 - Product listing with images
 
-- Shopping cart & checkout
+- Checkout
 
 - Simple payment form
+
+- Admin Dashboard
 
 ## Technologies & Tools
 
