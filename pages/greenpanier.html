@@ -315,11 +315,53 @@
           container.appendChild(productDiv);
         });
         })
-            .catch(error => {
+          .catch(error => {
               console.error("Error fetching the products :", error);
-              document.getElementById('products').innerHTML = '<p><strong>Error fetching the products.</strong></p>';
+              const container = document.getElementById('products');
+              container.innerHTML = '';
+              
+              const fallbackProducts = [
+                { product_id: "1", name: "Tomato", price: "6.00", description: "Vitamins A, C, K | Antioxidant | Heart-healthy | Hydrating", img: "../assets/images/vegetables/tomato.png" },
+                { product_id: "4", name: "Bell Pepper", price: "11.00", description: "Vitamins A, C, B6 | Antioxidant | Eye-health | Low-calorie", img: "../assets/images/vegetables/bell_pepper.png" },
+                { product_id: "6", name: "Apple", price: "5.00", description: "Vitamins C, B6, K | Heart-healthy | Fiber-rich | Antioxidant", img: "../assets/images/fruits/apple.png" },
+                { product_id: "7", name: "Pear", price: "10.00", description: "Vitamins C, K, B6 | Fiber-rich | Heart-healthy | Antioxidant", img: "../assets/images/fruits/pear.png" },
+                { product_id: "8", name: "Carrot", price: "3.00", description: "Vitamins A, K, B6 | Eye-health | Antioxidant | Fiber-rich", img: "../assets/images/vegetables/carrot.png" },
+                { product_id: "10", name: "Cauliflower", price: "9.00", description: "Vitamins C, K, B6 | Fiber-rich | Antioxidant | Anti-inflammatory", img: "../assets/images/vegetables/cauliflower.png" },
+                { product_id: "11", name: "Banana", price: "11.00", description: "Vitamins B6, C, A | Energy-boosting | Heart-healthy | Digestive support", img: "../assets/images/fruits/banana.png" },
+                { product_id: "12", name: "Orange", price: "4.00", description: "Vitamins C, A, B1 | Immune support | Antioxidant | Heart-healthy", img: "../assets/images/fruits/orange.png" },
+                { product_id: "13", name: "Potato", price: "3.00", description: "Vitamins C, B6, B3 | Energy-rich | Fiber source | Heart-healthy", img: "../assets/images/vegetables/potato.png" },
+                { product_id: "14", name: "Onion", price: "3.00", description: "Vitamins C, B6, B1 | Antioxidant | Anti-inflammatory | Heart-healthy", img: "../assets/images/vegetables/onion.png" },
+                { product_id: "15", name: "Mango", price: "15.00", description: "Vitamins A, C, E | Immune support | Antioxidant | Digestive health", img: "../assets/images/fruits/mango.png" },
+                { product_id: "16", name: "Watermelon", price: "9.00", description: "Vitamins A, C, B6 | Hydrating | Antioxidant | Heart-healthy", img: "../assets/images/fruits/watermelon.png" },
+              ];
+            
+              fallbackProducts.forEach(product => {
+                const productDiv = document.createElement('div');
+                productDiv.className = `product-box`;
+            
+                productDiv.innerHTML = `<img src="${product.img}" alt="${product.name}">
+                                        <hr>
+                                        <h3>${product.name}</h3>
+                                        <p>${product.description}</p>
+                                        <p><strong>${product.price}</strong> DH</p>
+                                        <button class="add-to-cart-btn">Add to Cart</button>`;
+            
+                const button = productDiv.querySelector('.add-to-cart-btn');
+                button.addEventListener('click', () => {
+                  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                  const exi_in_cart = cart.find(item => item.id === product.product_id);
+                  if (exi_in_cart) {
+                    exi_in_cart.quantity += 1;
+                  } else {
+                    cart.push({ ...product, id: product.product_id, quantity: 1 });
+                  }
+                  localStorage.setItem("cart", JSON.stringify(cart));
+                  toastTheMssg(`${product.name} added to cart!`);
+                });
+                container.appendChild(productDiv);
+              });
             });
-        }
+          }
 
         function toastTheMssg(message) {
           const toastContainer = document.getElementById("toast-container");
