@@ -60,7 +60,7 @@
 
 ---
 
-## **The user also can register an account to log with it later | The infos will be stored in the database at the user table**
+## **The user also can register an account to login with it later | The infos will be stored in the database at the user table**
 
 ![User Registeration](screenshots/16.png)
 
