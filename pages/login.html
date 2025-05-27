@@ -143,6 +143,73 @@
         opacity: 0.5;
     }
 
+    @media (max-width: 998px) {
+      .login-container {
+        width: 45%;
+      }
+      
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .login-container {
+        width: 65%;
+      }
+      
+      .register {
+        width: 55%;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .login-container {
+        width: 85%;
+      }
+      
+      .form-container {
+        padding: 25px;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .login-container form input, .login-container form button {
+        padding: 11px;
+      }
+      
+      .register {
+        width: 75%;
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .circle {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+    
+    @media (max-width: 400px) {
+      .login-container {
+        width: 95%;
+      }
+      
+      .form-container {
+        padding: 15px;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .login-container form button {
+        width: 75%;
+      }
+    }
+
 </style>
 </head>
 <body>

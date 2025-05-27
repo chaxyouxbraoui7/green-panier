@@ -189,6 +189,149 @@
         color: red;
         border: 1px solid rgba(235, 204, 209, 0.75);
     }
+
+    
+    @media (max-width: 992px) {
+      .payment-container {
+        width: 40%;
+      }
+      
+      h1 {
+        font-size: 2.2rem;
+      }
+      
+      .circle {
+        width: 6rem;
+        height: 6rem;
+      }
+      
+      .form-container form button {
+        width: 85%;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .payment-container {
+        width: 65%;
+      }
+      
+      .payment-total {
+        font-size: 1.25rem;
+      }
+      
+      .row {
+        flex-direction: column;
+        gap: 0;
+      }
+      
+      .circle {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .payment-container {
+        width: 85%;
+      }
+      
+      .form-container {
+        padding: 25px;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .form-container form input, .form-container form button {
+        padding: 11px;
+        margin: 11px 0;
+        text-align: center;
+        width: 100%;
+      }
+      
+      .payment-total {
+        font-size: 1.25rem;
+        top: 0.75rem;
+        right: 1rem;
+      }
+      
+      .circle {
+        width: 4rem;
+        height: 4rem;
+      }
+      
+      .message {
+        padding: 11px;
+        font-size: 14px;
+      }
+    }
+    
+    @media (max-width: 400px) {
+      .payment-container {
+        width: 95%;
+      }
+      
+      .form-container {
+        padding: 15px;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .form-container form button {
+        width: 100%;
+        text-align: center;
+        padding: 11px;
+      }
+      
+      .circle {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+      
+      .payment-total {
+        font-size: 1.25rem;
+      }
+    }
+    
+    @media (max-height: 500px) and (orientation: landscape) {
+      .container {
+        height: auto;
+        padding: 25px 0;
+      }
+      
+      .payment-container {
+        margin: 25px 0;
+      }
+      
+      .form-container {
+        padding: 15px;
+      }
+      
+      .form-container form input {
+        padding: 11px;
+        margin: 11px 0;
+      }
+      
+      .circle {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+    
+    @media (max-height: 600px) {
+      .container {
+        height: auto;
+        min-height: 100vh;
+        padding: 25px 0;
+      }
+      
+      .payment-container {
+        margin: 25px 0;
+      }
+    }
     
     </style>
 </head>
