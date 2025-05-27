@@ -9,9 +9,7 @@
 
 *GreenPanier* is a 30% mini-project for our **Dynamic Web Programming** subject.
 
-It is a basic e-commerce website where users can browse vegetables and fruits, register, log in, and proceed to checkout.
-
-The project runs locally using PHP and MySQL in XAMPP.
+It is a basic e-commerce website where users can browse vegetables and fruits, register, log in, and proceed to pay, the admin can add, update and remove products, locally in XAMPP.
 
 ## Features
 
