@@ -41,11 +41,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             exit;
 
         } else {
-            echo "<h1 style='color:darkred; text-align:center;'>Invalid password.</h1>";
+            echo "<h1 style='color:darkred; text-align:center;'>Invalid password!</h1>";
         }
 
     } else {
-        echo "<h1 style='color:darkred; text-align:center;'>No user found with that email.</h1>";
+        echo "<h1 style='color:darkred; text-align:center;'>No user found with that email!</h1>";
     }
 
     $stmt->close();

@@ -113,7 +113,7 @@ while ($row = $result->fetch_assoc()) {
         font-size: 15px;
         letter-spacing: 1.5px;
         font-weight: bolder;
-        width: 11%;
+        width: 25%;
         cursor: pointer;
         margin: auto;
         transition: all 0.125s ease-in-out;
