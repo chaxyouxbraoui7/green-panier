@@ -71,5 +71,4 @@
 ---
 
 > [!NOTE]
->
-> **And that's it!**
+> **If the user did visit the website with no backend (like using the GitHub pages feature) the products will dynamiclly show, because the images are stored in the `assets` directory and all the informations are declared inside the inline JavaScript code within the `greenpanier.html` file as `fallbackProducts`.**
