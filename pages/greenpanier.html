@@ -158,10 +158,12 @@
     
     footer .footer-section.left {
       text-align: left;
+      font-size: 11px;
     }
     
     footer .footer-section.center {
       text-align: center;
+      font-size: 11px;
     }
     
     footer .footer-section.right {
@@ -171,7 +173,7 @@
     footer .footer-section.left a {
       color: black;
       margin-left: 15px;
-      font-size: 45px;
+      font-size: 35px;
       transition: color 0.25s;
       text-decoration: none;
     }
@@ -182,16 +184,16 @@
     
     footer .footer-logo {
       transition: transform 0.25s ease;
-      width: 3vw;
-      height: 3vw;
-      min-width: 33px;
-      min-height: 33px; 
+      width: 4vw;
+      height: 4vw;
+      min-width:  44px;
+      min-height:  44px; 
       border-radius: 75%;
       object-fit: cover;
     }
 
     footer .footer-logo:hover {
-      transform: translateY(-5px) scale(1.025);
+      transform: translateY(-3x) scale(0.025);
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     }
     
@@ -229,7 +231,7 @@
       }
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 1440px) {
       .products-container {
          grid-template-columns: repeat(3, 1fr);
       }
@@ -254,58 +256,8 @@
       .product-box img {
          height: 150px;
       }
-    }
-
-    @media (max-width: 576px) {
-      .products-container {
-        grid-template-columns: 1fr;
-        padding: 15px;
-      }
-      
-      h1 {
-        font-size: 75px;
-      }
-      
-      header {
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        text-align: flex-end;
-      }
-      
-      .header-icons {
-        position: relative;
-        top: auto;
-        left: auto;
-        justify-content: flex-end;
-        margin-top: 15px;
-      }
-      
-      .product-box {
-        max-width: 750px;
-        margin: 0 auto;
-      }
-      
       footer {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-      }
-      
-      footer .footer-section {
-        text-align: center;
-      }
-      
-      footer .footer-section.right {
-        order: 1;
-      }
-      
-      footer .footer-section.center {
-        order: 2;
-      }
-      
-      footer .footer-section.left {
-        order: 3;
+        padding: 7px;
       }
     }
 
@@ -341,8 +293,8 @@
       }
       
       footer {
-        padding: 15px 10px;
-      }
+        padding: 7px;
+      }  
     }
 
   </style>

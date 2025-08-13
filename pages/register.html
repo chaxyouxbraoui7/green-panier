@@ -43,7 +43,7 @@
         position: relative;
     }
     
-    .login-container {
+    .register-container {
         position: relative;
         width: 25%;
     }
@@ -61,7 +61,7 @@
         overflow: hidden;
     }
     
-    .login-container form input {
+    .register-container form input {
         display: block;
         padding: 15px;
         width: 100%;
@@ -80,7 +80,7 @@
         backdrop-filter: blur(15px);
     }
     
-    .login-container form button {
+    .register-container form button {
         background-color: var(--primary-color);
         display: block;
         padding: 15px;
@@ -97,7 +97,7 @@
         border: none;
     }
     
-    .login-container form button:hover {
+    .register-container form button:hover {
         box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.125);
         transform: scale(1.025);
         -webkit-transform: scale(1.025);
@@ -133,9 +133,9 @@
         opacity: 0.5;
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 1440px) {
       .register-container {
-        width: 45%;
+        width: 33%;
       }
       
       h1 {
@@ -146,15 +146,19 @@
         width: 6rem;
         height: 6rem;
       }
+      
+      .register-container form button {
+        width: 33%;
+      }
     }
     
     @media (max-width: 768px) {
       .register-container {
-        width: 65%;
+        width: 50%;
       }
       
       .register-container form button {
-        width: 65%;
+        width: 35%;
       }
       
       .circle {
@@ -163,9 +167,9 @@
       }
     }
     
-    @media (max-width: 576px) {
+    @media (max-width: 400px) {
       .register-container {
-        width: 85%;
+        width: 75%;
       }
       
       .form-container {
@@ -176,32 +180,9 @@
         font-size: 2rem;
       }
       
-      .register-container form input, .register-container form button {
-        padding: 11px;
-        margin: 11px 0;
-      }
-      
-      .circle {
-        width: 4rem;
-        height: 4rem;
-      }
-    }
-    
-    @media (max-width: 400px) {
-      .register-container {
-        width: 95%;
-      }
-      
-      .form-container {
-        padding: 15px;
-      }
-      
-      h1 {
-        font-size: 2rem;
-      }
-      
       .register-container form button {
-        width: 75%;
+        width: 33%;
+        font-size: 11px;
       }
       
       .circle {
@@ -213,20 +194,11 @@
     @media (max-height: 500px) and (orientation: landscape) {
       .container {
         height: auto;
-        padding: 25px 0;
       }
       
-      .register-container {
-        margin: 25px 0;
-      }
-      
-      .form-container {
-        padding: 15px;
-      }
-      
-      .register-container form input {
-        padding: 15px;
-        margin: 15px 0;
+      .register-container form button {
+        width: 35%;
+        font-size: 11px;
       }
     }
 

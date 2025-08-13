@@ -28,11 +28,16 @@
       margin-bottom: 1rem;
     }
 
+    p {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      margin-bottom: 1rem;
+    }
+
     a.btn {
       display: inline-block;
-      padding: 1.25rem 2.5rem;
+      padding: 0.75rem 1.75rem;
       background-color: lightgreen;
-      color: black;
+      color: darkgreen;
       border-radius: 8px;
       text-decoration: none;
       font-size: 1.25rem;
@@ -43,13 +48,25 @@
       background-color: lightgreen;
       transform: scale(1.025);
     }
+
+    @media (max-width: 400px){
+
+      h1 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 10px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="bubble-effect"></div>
-    <h1>Welcome To GreenPanier</h1>
-    <a href="pages/greenpanier.html" class="btn">Go To Greenpanier</a>
+    <h1>Welcome To GreenPanier!</h1>
+    <a href="pages/greenpanier.html" class="btn">View The Website</a>
+    <p><strong>GreenPanier is a very basic <u>e-commerce</u> website of fruits & vegetables.</strong>
+       <br>It has a light green theme with a dynamic design.</p>
   </div>
 <script src="assets/greenpanier.js"></script>
 </body>
